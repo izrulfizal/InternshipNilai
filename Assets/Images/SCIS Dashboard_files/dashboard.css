@@ -1,0 +1,123 @@
+/* General body styling */
+body {
+    background: linear-gradient(135deg, #1e1e2f, #303045);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Sidebar styling */
+.sidebar {
+    background: rgba(255, 255, 255, 0.1);
+    width: 250px;
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    position: fixed; /* Sidebar stays fixed */
+    top: 0;
+    left: 0;
+}
+
+.sidebar-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar .logo {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+.sidebar h2 {
+    font-size: 22px;
+    color: #fff;
+    margin: 0;
+}
+
+.sidebar-menu {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar-menu li {
+    margin: 15px 0;
+}
+
+.sidebar-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.sidebar-menu a:hover {
+    color: #c7c7c7;
+}
+
+/* Main content styling */
+.main-content {
+    margin-left: 270px; /* Adjust based on sidebar width */
+    padding: 40px;
+    flex-grow: 1;
+    height: 100vh;
+    overflow-y: auto; /* To handle overflow of content */
+}
+
+.main-title {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #c7c7c7;
+}
+
+/* Bento-style containers for charts */
+.bento-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.bento-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.chart-placeholder {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #c7c7c7;
+}
+
+/* Glassmorphism effect for bento boxes */
+.glass-box {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .bento-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
